@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    image: postgres:9.6
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: user
+      POSTGRES_DB: db
+
+
+volumes:
+  db_data: 
